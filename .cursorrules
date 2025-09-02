@@ -1,0 +1,78 @@
+# .cursorrules
+# === Objectif ===
+# Fournir un cadre strict pour la documentation, le style, la sécurité,
+# l'organisation et les tests afin de garantir un code maintenable et robuste.
+
+rules:
+
+  # ===============================
+  # 📖 Bloc 1 : Documentation
+  # ===============================
+  docs:
+    - Chaque fichier doit commencer par un commentaire décrivant son rôle global.
+    - Chaque fonction et méthode doit avoir une docstring/documentation standardisée.
+    - Chaque classe doit expliquer son rôle et ses propriétés principales.
+    - Les paramètres, types de retour et exceptions doivent être systématiquement documentés.
+    - Ne jamais inventer de comportements inexistants.
+    - Utiliser le style standard :
+      * JSDoc pour JavaScript/TypeScript
+      * PHPDoc pour PHP
+      * Google Style pour Python
+
+  # ===============================
+  # 🎨 Bloc 2 : Style & Lisibilité
+  # ===============================
+  style:
+    - Respecter une indentation cohérente (2 ou 4 espaces selon la convention du projet).
+    - Ne pas dépasser 100 caractères par ligne (code et commentaires).
+    - Utiliser des noms de variables et fonctions explicites (camelCase en JS/TS, snake_case en Python, etc.).
+    - Éviter les commentaires superflus qui répètent exactement le code.
+    - Préférer la lisibilité à l’optimisation prématurée.
+
+  # ===============================
+  # 🔒 Bloc 3 : Sécurité
+  # ===============================
+  security:
+    - Ne jamais laisser de mot de passe, clé API ou secret en clair dans le code.
+    - Toujours valider et échapper les entrées utilisateurs.
+    - Ne pas utiliser `eval()` ou équivalents dangereux.
+    - Les requêtes SQL doivent être paramétrées pour éviter les injections.
+    - Ne pas exposer d’informations sensibles dans les messages d’erreurs.
+
+  # ===============================
+  # ⚡ Bloc 4 : Performance
+  # ===============================
+  performance:
+    - Éviter les boucles imbriquées inutiles.
+    - Utiliser les méthodes natives optimisées (`map`, `filter`, `reduce`, etc.).
+    - Utiliser la pagination pour les récupérations volumineuses.
+    - Mettre en cache les calculs coûteux ou répétés.
+    - Préférer les structures de données adaptées (Set, Map, Dictionary…).
+
+  # ===============================
+  # 🏗️ Bloc 5 : Structure & Organisation
+  # ===============================
+  structure:
+    - Un fichier doit avoir une responsabilité principale (Single Responsibility Principle).
+    - Diviser le code en modules clairs et réutilisables.
+    - Éviter les fonctions de plus de 50 lignes (les découper).
+    - Toujours gérer les erreurs (try/catch ou équivalent).
+    - Suivre le principe DRY (Don't Repeat Yourself) : éviter la duplication de code.
+
+  # ===============================
+  # ✅ Bloc 6 : Tests
+  # ===============================
+  tests:
+    - Chaque fonction critique doit avoir un test unitaire.
+    - Les tests doivent couvrir les cas normaux, limites et erreurs.
+    - Les noms des tests doivent décrire clairement ce qu’ils vérifient.
+    - Les tests doivent être reproductibles et indépendants entre eux.
+
+  # ===============================
+  # 🌱 Bloc 7 : Git & Collaboration
+  # ===============================
+  git:
+    - Chaque commit doit avoir un message clair et descriptif.
+    - Les branches doivent être nommées en fonction de leur objectif (`feature/`, `fix/`, `docs/`, etc.).
+    - Ne jamais commit de fichiers temporaires ou dépendances externes (`node_modules`, `vendor`, etc.).
+    - Toujours lier les commits à une issue/tâche si disponible.
