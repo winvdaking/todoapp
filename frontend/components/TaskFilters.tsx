@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * Composant TaskFilters - Filtres pour les tâches
  * 

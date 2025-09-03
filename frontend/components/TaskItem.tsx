@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * Composant TaskItem - Représente une tâche individuelle
  * 

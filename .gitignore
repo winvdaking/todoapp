@@ -22,6 +22,10 @@ frontend/.env.test.local
 frontend/.env.production.local
 frontend/.env.development
 frontend/.env.production
+frontend/.next
+frontend/package-lock.json
+frontend/yarn.lock
+frontend/bun.lockb
 
 .env
 .env.local
@@ -41,3 +45,4 @@ frontend/.env.production
 .vscode/settings.json
 .vscode/tasks.json
 .vscode/launch.json
+

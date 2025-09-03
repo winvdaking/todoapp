@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * Composant AddTask - Formulaire d'ajout de nouvelles tâches
  * 

@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * Composant TaskList - Liste des tâches avec drag & drop
  * 
